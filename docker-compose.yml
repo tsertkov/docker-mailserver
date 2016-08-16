@@ -6,10 +6,10 @@ services:
     hostname: ${HOSTNAME}
     domainname: ${DOMAINNAME}
     ports:
-      - 25:25
-      - 143:143
-      - 587:587
-      - 993:993
+      - "25:25"
+      - "143:143"
+      - "587:587"
+      - "993:993"
     environment:
       SSL_TYPE: ${SSL_TYPE}
       SASL_PASSWD: ${SASL_PASSWD}
