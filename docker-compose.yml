@@ -3,8 +3,8 @@ services:
   mail:
     image: tvial/docker-mailserver
     restart: unless-stopped
-    hostname: mail
-    domainname: domain.com
+    hostname: ${HOSTNAME}
+    domainname: ${DOMAINNAME}
     ports:
       - 25:25
       - 143:143
@@ -15,4 +15,4 @@ services:
       SASL_PASSWD: ${SASL_PASSWD}
     volumes:
       - ./var/maildata:/var/mail
-      - ./config/:/tmp/docker-mailserver/
+      - ./config:/tmp/docker-mailserver:ro
