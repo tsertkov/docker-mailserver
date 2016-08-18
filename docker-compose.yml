@@ -12,7 +12,6 @@ services:
       - "993:993"
     environment:
       SSL_TYPE: ${SSL_TYPE}
-      SASL_PASSWD: ${SASL_PASSWD}
     volumes:
       - ./var/maildata:/var/mail
       - ./config:/tmp/docker-mailserver:ro
